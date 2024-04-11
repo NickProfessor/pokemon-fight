@@ -1,0 +1,496 @@
+
+body { /* Para compensar a altura do cabeçalho fixo */
+  background-color: #dddddd;
+}
+
+.completaTela{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.completaTela .parteDeCima{
+  width: 100%;
+}
+.container-principal{
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  background-color: rgb(12, 20, 122);
+  margin-top: 3em;
+  padding: 4em 1em;
+  border-radius: 10px;
+  border: solid 4px rgb(194, 176, 176);
+  position: relative;
+}
+/* Parte dos pokemons APENAS */
+.container-pokemons{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 2em;
+  background-color: rgb(168, 240, 240);
+  border-radius: 10px;
+  border: solid 10px rgb(184, 182, 182);
+  padding: 3em 0;
+  width: 500px;
+  position: relative;
+  min-height: 500px;
+  /* max-height: 494px; */
+}
+
+.texto-selecione{
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  top: -20px;
+  font-size: 1.3em;
+  background-color: rgb(0, 153, 255);
+  color:white;
+  padding: 0.3em 1em;
+  border-radius: 10px;
+  border: solid 4px rgb(184, 182, 182);
+  z-index: 10;
+}
+
+.pokemonEscolhido{
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  bottom: -30px;
+  font-size: 1.3em;
+  background-color: rgb(60, 57, 240);
+  color:white;
+  padding: 0.3em 1em;
+  border-radius: 10px;
+  border: solid 4px rgb(184, 182, 182);
+  text-transform: uppercase;
+  z-index: 9;
+}
+
+
+.campo-do-pokemon{
+  background-color: rgb(255, 225, 143);
+  width: 100px;
+  border: solid 2px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.campo-do-pokemon:hover{
+  cursor: pointer;
+  background-color: rgb(209, 255, 172);
+  border-color: rgb(0, 255, 13);
+}
+
+.campo-do-pokemon-escolhido{
+  background-color: rgb(24, 122, 167);
+  border-color: rgb(59, 97, 95);
+  position: relative;
+}
+
+.campo-do-pokemon-escolhido::after{
+  content: "Selecionado!";
+  position: absolute;
+  z-index: 10;
+  top: -15px;
+  left: -7px;
+  padding: 5px;
+  background-color: rgba(31, 48, 143, 0.788); /* Cor de fundo para o conteúdo */
+  color: white; /* Cor do texto */
+  font-weight: bold;
+  border-radius: 10px; /* Borda arredondada */
+  border: solid 2px #0000009f;
+  
+}
+
+.campo-do-pokemon-escolhido:hover{
+  background-color: rgb(81, 200, 255);
+  border-color: rgb(0, 255, 242);
+}
+
+/* FIM da parte dos pokemons */
+
+
+
+/* Começo container aleatorio */
+.container-pokemon-aleatorio{
+  width: 500px;
+  margin: 0 auto;
+  
+  border-radius: 10px;
+  border: solid 10px rgb(184, 182, 182);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  position: relative;
+  min-height: 500px;
+}
+
+.container-pokemon-aleatorio img{
+  height: 300px;
+}
+
+.container-pokemon-aleatorio button{
+  background-color: rgb(0, 153, 255);
+  border: solid 3px rgba(121, 153, 167, 0.877);
+  border-radius: 10px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-size: 1.1em;
+  width: 200px;
+  height: 60px;
+  transition: 0.4s;
+}
+
+.container-pokemon-aleatorio button:hover{
+  background-color: rgba(42, 207, 27);
+}
+
+.container-pokemon-aleatorio h3{
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  top: -20px;
+  font-size: 1.3em;
+  background-color: rgb(0, 153, 255);
+  color:white;
+  padding: 0.3em 1em;
+  border-radius: 10px;
+  border: solid 4px rgb(184, 182, 182);
+}
+
+/* Fim container aleatorio */
+
+
+.iniciarBatalha{
+  background-color: rgb(207, 27, 27);
+  width: 250px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.3em;
+  height: 70px;
+  border: solid 5px rgba(255, 255, 255, 0.568);
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.4s;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  right: 0;
+  margin: auto;
+}
+
+.iniciarBatalha:hover{
+  background-color: rgb(42, 207, 27);
+}
+
+.footer {
+height: auto;
+  width: 100%;
+  background-color: #212529;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer span{
+  color: white;
+ 
+}
+
+
+/* Estilos extras para a página FIGHT */
+
+#imagemAliado{
+  height: 150px;
+}
+
+#imagemAleatorio{
+  height: 150px;
+}
+
+.vidaDoJogador{
+  width: 100%; /* Define a largura da linha */
+  height: 7px; /* Define a altura da linha */
+  background-color: rgb(255, 0, 0); /* Cor da linha */
+  position: relative;
+}
+.vidaRestante {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 255, 30);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 1s;
+}
+.container-pokemon-aliado{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(78, 99, 140);
+}
+.container-pokemon-aliado img{
+  padding: 1em 2em;
+  background-color: rgb(23, 213, 246);
+  border: solid 3px rgba(47, 0, 255, 0.502);
+  border-radius: 10px;
+}
+
+.container-pokemon-aliado .texto-selecione{
+  background-color: darkblue;
+  font-weight: bold;
+}
+
+.container-pokemon-aleatorio{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgb(143, 85, 45);
+  
+}
+
+.aleatorio-paginaFight img{
+  padding: 1em 2em;
+  background-color: rgb(246, 108, 23);
+  border: solid 3px rgba(255, 0, 0, 0.502);
+  border-radius: 10px;
+}
+
+.aleatorio-paginaFight h3{
+  background-color: rgb(139, 0, 0);
+  font-weight: bold;
+}
+
+.lista-de-ataques{
+  list-style: none;
+  width:350px;
+  overflow: auto;
+  margin: 0 auto;
+  background-color: #403d3fdd;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+}
+.lista-de-ataques::-webkit-scrollbar {
+  width: 10px;
+}
+
+.lista-de-ataques::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.lista-de-ataques::-webkit-scrollbar-thumb:hover {
+  background-color: #5f4a4a; /* Cor do fundo do botão de rolagem ao passar o mouse */
+}
+
+.ataque-do-pokemon{
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  padding: 0.4em 0;
+  border-bottom: solid 1px #090a0b79;
+  text-transform: capitalize;
+  transition: 0.5 ease-in-out;
+  animation: ataqueFeito 1s;
+  
+}
+
+/* Estilos extras na página result */
+.container-vencedor{
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2em;
+}
+
+.container-vencedor h1{
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.imagemPokemonVencedor{
+  height: 400px;
+}
+
+.container-vencedor .iniciarBatalha{
+  position: static;
+  background-color: rgb(216, 203, 203);
+  color: #212529;
+  border-color: #21252984;
+  transition: 0.6s;
+}
+
+.container-vencedor .iniciarBatalha:hover{
+  background-color: rgb(112, 98, 98);
+  color: #ffffff;
+  border-color: #21252984;
+}
+
+#nomeDoPokemonAlidado, .nomeDoPokemonAleatorio{
+  text-transform: uppercase;
+}
+
+.versus{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: bold;
+  font-size: 3.5em;
+  color: rgb(255, 85, 0);
+  text-shadow: 0 0 20px red;
+  right: 0;
+  bottom: 0;
+  width: 100px;
+  margin: auto;
+  height: 100px;
+}
+
+
+
+.container-pokemons i{
+  font-style: normal;
+}
+
+.vidaJogadorTodos{
+  margin-top: 8px;
+  color: rgb(93, 183, 3);
+}
+
+.danoCausado{
+  color: rgb(146, 26, 26);
+}
+
+.pokemonMorreu{
+  transition: 1s;
+  color: #46484a;
+  background-color: #2125298c;
+  filter: grayscale(1);
+}
+
+.quemGanhou{
+  display: none;
+    position: absolute;
+    font-weight: bold;
+    text-align: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 1.3em;
+    background-color: rgb(13 61 108);
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    border: solid 4px rgb(184, 182, 182);
+    text-transform: uppercase;
+    z-index: 9;
+    margin: auto;
+    width: 540px;
+    height: 150px;
+
+}
+
+.quemGanhou h1{
+  font-weight: bold;
+}
+
+.quemGanhou h4{
+  font-weight: bold;
+}
+.nomeDoPokemonVencodrMD{
+  color:rgb(255, 102, 0) ;
+}
+
+header .textoAlinharHeader, header span{
+  text-align: center;
+  font-weight: bold;
+}
+
+.container-pokemon-aleatorio img{
+  padding: 1em 1.5em;
+  background-color: rgb(246, 108, 23);
+  border: solid 3px rgba(255, 0, 0, 0.502);
+  border-radius: 10px;
+}
+
+.containerVidaPerdida{
+  position: absolute;
+  top: 80px;
+  height: 100px;
+}
+
+.vidaPerdida{
+  display: block;
+  opacity: 0;
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgba(255, 0, 0, 0.486);
+  -webkit-text-stroke-width: 1px; /* Largura da borda */
+  -webkit-text-stroke-color: black; /* Cor da borda */
+  transition: 2s;
+  
+
+  
+}
+
+.levouDano{
+  animation: levouDano 2s;
+}
+
+#containerVidaPerdidaAliado{
+  left: 4em;
+}
+#containerVidaPerdidaInimigo{
+  right: 4em;
+}
+
+@keyframes levouDano{
+  0%{
+    opacity: 0;
+    
+  }
+  20%{
+    opacity: 1;
+    
+  }
+
+
+  100%{
+    margin-top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes ataqueFeito{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
